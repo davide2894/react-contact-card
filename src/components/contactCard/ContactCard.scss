@@ -2,4 +2,31 @@
 
 .contactCard {
     background-color: transparent;
+    text-align: left;
+    border: 5px solid black;
+    border-radius: 10px;
+    background: lightgoldenrodyellow;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    
+    &__info {
+        margin: auto 20px;
+    }
+
+    &__image {
+        &--user {
+            display: flex;
+            margin: 5px auto;
+        }
+
+        &--favourite {
+            width: 24px;
+            height: 24px;    
+        }
+    }
+
+    &__image--favourite,
+    &__name,
+    &__contact {
+        margin-bottom: 10px;
+    }
 }

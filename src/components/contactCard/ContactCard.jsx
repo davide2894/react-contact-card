@@ -36,19 +36,23 @@ export default function ContactCard() {
     return(
 
 
-        <article className="card">
-            <img src={userProfileIcon} className="card--image" />
-            <div className="card--info">
+        <article className="contactCard">
+            <img 
+                alt="user profile icon"
+                src={userProfileIcon} 
+                className="contactCard__image contactCard__image--user" />
+            <div className="contactCard__info">
                 <img 
+                    alt="icon to mark conctact card as favourite"
                     src={starIcon} 
-                    className="card--favorite"
+                    className="contactCard__image contactCard__image--favourite"
                     onClick={toggleFavorite}
                 />
-                <h2 className="card--name">
+                <h2 className="contactCard__name">
                     {contact.firstName} {contact.lastName}
                 </h2>
-                <p className="card--contact">{contact.phone}</p>
-                <p className="card--contact">{contact.email}</p>
+                <p className="contactCard__contact contactCard__contact--email">{contact.email}</p>
+                <p className="contactCard__contact contactCard__contact--phone">{contact.phone}</p>
             </div>
         </article>
     )
