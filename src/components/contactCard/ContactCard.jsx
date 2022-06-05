@@ -1,7 +1,8 @@
 import './ContactCard.scss';
 import { useState } from 'react';
 import userProfileIcon from '../../assets/icons/user-profile-96x96_icon.png';
-import starIcon from '../../assets/icons/star-48x48_icon.png';
+import starEmptyIcon from '../../assets/icons/star-empty_icon.png';
+import starFilledIcon from '../../assets/icons/star-filled_icon.png';
 
 export default function ContactCard() {  
     const [contact, setContact] = useState({
@@ -9,19 +10,32 @@ export default function ContactCard() {
         lastName: "Doe",
         phone: "+1 (719) 555-1212",
         email: "itsmyrealname@example.com",
-        isFavorite: false
+        isFavorite: true
     })
     /**
-     * Challenge: Fill in the values in the markup
-     * using the properties of our state object above
-     * (Ignore `isFavorite` for now)
+     * Challenge: Use a ternary to determine which star image filename
+     * should be used based on the `contact.isFavorite` property
+     * 
+     * `true` => "star-filled.png"
+     * `false` => "star-empty.png"
+     * 
+     * Then use the starIcon value to display the correct image
      */
     
     function toggleFavorite() {
-        console.log("Toggle Favorite")
+        setContact(prevContactObject => {
+            return {
+                ...prevContactObject,
+                isFavorite: !prevContactObject.isFavorite
+            }
+        })
     }
     
+    const starIcon = contact.isFavorite ? starFilledIcon : starEmptyIcon;
+
     return(
+
+
         <article className="card">
             <img src={userProfileIcon} className="card--image" />
             <div className="card--info">
@@ -31,10 +45,10 @@ export default function ContactCard() {
                     onClick={toggleFavorite}
                 />
                 <h2 className="card--name">
-                    John Doe
+                    {contact.firstName} {contact.lastName}
                 </h2>
-                <p className="card--contact">+1 (719) 555-1212</p>
-                <p className="card--contact">itsmyrealname@example.com</p>
+                <p className="card--contact">{contact.phone}</p>
+                <p className="card--contact">{contact.email}</p>
             </div>
         </article>
     )
