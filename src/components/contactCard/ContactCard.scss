@@ -17,14 +17,8 @@
             display: flex;
             margin: 5px auto;
         }
-
-        &--favourite {
-            width: 24px;
-            height: 24px;    
-        }
     }
 
-    &__image--favourite,
     &__name,
     &__contact {
         margin-bottom: 10px;
