@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-contact-card/static/css/main.7dfc5576.css",
+    "main.js": "/react-contact-card/static/js/main.bf75653a.js",
+    "static/js/787.54d43aef.chunk.js": "/react-contact-card/static/js/787.54d43aef.chunk.js",
+    "index.html": "/react-contact-card/index.html",
+    "main.7dfc5576.css.map": "/react-contact-card/static/css/main.7dfc5576.css.map",
+    "main.bf75653a.js.map": "/react-contact-card/static/js/main.bf75653a.js.map",
+    "787.54d43aef.chunk.js.map": "/react-contact-card/static/js/787.54d43aef.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7dfc5576.css",
+    "static/js/main.bf75653a.js"
+  ]
+}
